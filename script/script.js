@@ -9,12 +9,15 @@ clear=document.getElementById('clear');
 del=document.getElementById('del');
 let res=document.getElementById('result');
 let result = ''
-res_len = result.length;
+var res_len = result.length;
 del.onclick = () => {
-    if(result!='') {
+    if(result==''||result.length==1) {
+        result='';
+        res.innerText='0';
+    } else {
         result = result.slice(0,-1);
+        res.innerText=result;
     }
-    res.innerText=result;
 }
 clear.onclick = () => {
     result='';

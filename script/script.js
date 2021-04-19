@@ -27,8 +27,13 @@ del.onclick = () => {
     }
 }
 equal.onclick = () => {
-    result = eval(result);
-    res.innerText=result;
+    try{
+        result = eval(result);
+        res.innerText=result;
+    } catch(err){
+        res.innerText="Error Expression";
+        result="";
+    }
 }
 point.onclick = function() {
     res.innerText=result+='.';

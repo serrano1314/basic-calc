@@ -5,12 +5,19 @@ let arr_id=[]
 for(let i=0;i<10;i++){
     arr_id[i]=document.getElementById('num'+i);
 }
-clear=document.getElementById('clear');
-del=document.getElementById('del');
+let clear=document.getElementById('clear');
+let del=document.getElementById('del');
+let muliply=document.getElementById('mult');
+let divide=document.getElementById('divi');
+let add=document.getElementById('add');
+let subtract=document.getElementById('subt');
+let equal=document.getElementById('equal');
 let res=document.getElementById('result');
+let point=document.getElementById('point');
 let result = ''
 var res_len = result.length;
 del.onclick = () => {
+    result+="";
     if(result==''||result.length==1) {
         result='';
         res.innerText='0';
@@ -19,6 +26,26 @@ del.onclick = () => {
         res.innerText=result;
     }
 }
+equal.onclick = () => {
+    result = eval(result);
+    res.innerText=result;
+}
+point.onclick = function() {
+    res.innerText=result+='.';
+}
+divide.onclick = function() {
+    res.innerText=result+='/';
+}
+muliply.onclick = function() {
+    res.innerText=result+='*';
+}
+add.onclick = function() {
+    res.innerText=result+='+';
+}
+subtract.onclick = function() {
+    res.innerText=result+='-';
+}
+
 clear.onclick = () => {
     result='';
     res.innerText='0'

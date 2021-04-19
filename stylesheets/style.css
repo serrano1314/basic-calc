@@ -1,3 +1,8 @@
+table{
+    background-color: rgb(209, 209, 209);
+    border-radius: 10px;
+    padding: 2px;
+}
 td{
     font: 20px arial;
     font-weight: bold;
@@ -6,14 +11,20 @@ td{
     user-select: none;
     border-style: outset;
     border-radius: 9px;
-    background-color: rgb(218, 218, 218);
+    background-color: rgb(235, 235, 235);
 }
 td:hover:not(#result){
-    background-color: rgb(204, 204, 204);
+    background-color: rgb(219, 219, 219);
 }
 td:active{
     border-style:ridge;
 }
 #result{
+    overflow: scroll;
+    padding: 10px 5px;
+    text-align: right;
     border-style: ridge;
+}
+.operator{
+    color: rgb(250, 0, 0);
 }

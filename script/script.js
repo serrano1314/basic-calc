@@ -67,7 +67,7 @@ arr_id[3].onclick = function() {
 }
 
 arr_id[4].onclick = function() {
-    res.innerText=result+='5';
+    res.innerText=result+='4';
 }
 
 arr_id[5].onclick = function() {
